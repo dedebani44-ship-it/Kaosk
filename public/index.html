@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaosk Downloader - TikTok & YouTube</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">TikTok • YouTube • Musik</p>
+        <h1>Downloader video & audio yang simpel.</h1>
+        <p class="subtitle">
+          Tempel link TikTok atau YouTube, cek detail konten, lalu unduh sebagai video MP4 atau musik MP3.
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="download-title">
+        <h2 id="download-title">Masukkan URL</h2>
+        <form id="download-form" class="form">
+          <label class="sr-only" for="url">URL TikTok atau YouTube</label>
+          <input id="url" name="url" type="url" placeholder="https://www.youtube.com/watch?v=..." required />
+          <div class="actions">
+            <button type="submit" data-type="video">Unduh Video</button>
+            <button type="submit" data-type="audio" class="secondary">Unduh Musik</button>
+            <button type="button" id="info-button" class="ghost">Cek Detail</button>
+          </div>
+        </form>
+        <p class="notice">
+          Gunakan hanya untuk konten milik Anda, konten bebas lisensi, atau konten yang Anda punya izin untuk unduh.
+        </p>
+      </section>
+
+      <section id="result" class="result hidden" aria-live="polite"></section>
+
+      <section class="guide">
+        <h2>Cara menjalankan</h2>
+        <ol>
+          <li>Install <code>yt-dlp</code> dan <code>ffmpeg</code> di server.</li>
+          <li>Jalankan <code>npm start</code>.</li>
+          <li>Buka <code>http://localhost:3000</code>.</li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
